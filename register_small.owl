@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY acp "http://www.ac.govt.nz/parcel" >
+    <!ENTITY sf "http://www.opengis.net/ont/sf#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY bld "http://www.fire.org.nz/building" >
+    <!ENTITY adr "http://www.linz.govt.nz/address" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY geo "http://www.opengis.net/ont/geosparql#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY pds "http://linz.govt.nz/PropertyDataSchema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:acp="http://www.ac.govt.nz/parcel"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:adr="http://www.linz.govt.nz/address"
+     xmlns:bld="http://www.fire.org.nz/building"
+     xmlns:geo="http://www.opengis.net/ont/geosparql#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sf="http://www.opengis.net/ont/sf#"
+     xmlns:pds="http://linz.govt.nz/PropertyDataSchema#">
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://linz.govt.nz/PropertyDataSchema#hasExactGeometry -->
+
+    <AnnotationProperty rdf:about="&pds;hasExactGeometry">
+        <rdfs:subPropertyOf rdf:resource="&geo;hasDefaultGeometry"/>
+        <rdfs:subPropertyOf rdf:resource="&geo;hasGeometry"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://linz.govt.nz/PropertyDataSchema#hasPointGeometry -->
+
+    <AnnotationProperty rdf:about="&pds;hasPointGeometry">
+        <rdfs:subPropertyOf rdf:resource="&geo;hasGeometry"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://linz.govt.nz/PropertyDataSchema#isRelated -->
+
+    <AnnotationProperty rdf:about="&pds;isRelated"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#asWKT -->
+
+    <AnnotationProperty rdf:about="&geo;asWKT"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#hasDefaultGeometry -->
+
+    <AnnotationProperty rdf:about="&geo;hasDefaultGeometry"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#hasGeometry -->
+
+    <AnnotationProperty rdf:about="&geo;hasGeometry"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opengis.net/ont/sf#wktLiteral -->
+
+    <rdfs:Datatype rdf:about="&sf;wktLiteral"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasRelation -->
+
+    <ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasRelation">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://linz.govt.nz/PropertyDataSchema#Address -->
+
+    <Class rdf:about="&pds;Address">
+        <rdfs:subClassOf rdf:resource="&geo;Feature"/>
+    </Class>
+    
+
+
+    <!-- http://linz.govt.nz/PropertyDataSchema#Building -->
+
+    <Class rdf:about="&pds;Building">
+        <rdfs:subClassOf rdf:resource="&geo;Feature"/>
+    </Class>
+    
+
+
+    <!-- http://linz.govt.nz/PropertyDataSchema#Parcel -->
+
+    <Class rdf:about="&pds;Parcel">
+        <rdfs:subClassOf rdf:resource="&geo;Feature"/>
+    </Class>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Feature -->
+
+    <Class rdf:about="&geo;Feature"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/sf#Point -->
+
+    <Class rdf:about="&sf;Point"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/sf#Polygon -->
+
+    <Class rdf:about="&sf;Polygon"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://linz.govt.nz/PropertyDataSchema#ExactGeom170 -->
+
+    <NamedIndividual rdf:about="&pds;ExactGeom170">
+        <rdf:type rdf:resource="&sf;Polygon"/>
+        <geo:asWKT rdf:datatype="&sf;wktLiteral"> &lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; POLYGON((174.644729850046 -36.8288002164868,174.644704800222 -36.8282567830522,174.644793549817 -36.828254133621,174.644892550158 -36.8282511836375,174.644917583352 -36.8287946163471,174.644729850046 -36.8288002164868))  </geo:asWKT>
+    </NamedIndividual>
+    
+
+
+    <!-- http://linz.govt.nz/PropertyDataSchema#ExactGeom409258 -->
+
+    <NamedIndividual rdf:about="&pds;ExactGeom409258">
+        <rdf:type rdf:resource="&sf;Polygon"/>
+        <geo:asWKT rdf:datatype="&sf;wktLiteral"> &lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; POLYGON((174.644729850046 -36.8288002164868,174.644704800222 -36.8282567830522,174.644793549817 -36.828254133621,174.644892550158 -36.8282511836375,174.644917583352 -36.8287946163471,174.644729850046 -36.8288002164868))  </geo:asWKT>
+    </NamedIndividual>
+    
+
+
+    <!-- http://linz.govt.nz/PropertyDataSchema#ExactGeom437866 -->
+
+    <NamedIndividual rdf:about="&pds;ExactGeom437866">
+        <rdf:type rdf:resource="&sf;Polygon"/>
+        <geo:asWKT rdf:datatype="&sf;wktLiteral"> &lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; POLYGON((174.644876599824 -36.8284912490891,174.645059736263 -36.828486011595,174.645063175089 -36.8285645466806,174.645040075006 -36.8285652269094,174.645041879523 -36.8286062960015,174.644965833524 -36.8286084300125,174.644964065709 -36.8285690730016,174.64488016704 -36.8285714949962,174.644876599824 -36.8284912490891))  </geo:asWKT>
+    </NamedIndividual>
+    
+
+
+    <!-- http://linz.govt.nz/PropertyDataSchema#PointGeom409258 -->
+
+    <NamedIndividual rdf:about="&pds;PointGeom409258">
+        <rdf:type rdf:resource="&sf;Point"/>
+        <geo:asWKT rdf:datatype="&sf;wktLiteral"> &lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; Point(174.644729850046 -36.8288002164868)
+ </geo:asWKT>
+    </NamedIndividual>
+    
+
+
+    <!-- http://linz.govt.nz/PropertyDataSchema#PointGeom437866 -->
+
+    <NamedIndividual rdf:about="&pds;PointGeom437866">
+        <rdf:type rdf:resource="&sf;Point"/>
+        <geo:asWKT rdf:datatype="&sf;wktLiteral"> &lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; Point(174.644876599824 -36.8284912490891)
+ </geo:asWKT>
+    </NamedIndividual>
+    
+
+
+    <!-- http://linz.govt.nz/PropertyDataSchema#PointGeom987882 -->
+
+    <NamedIndividual rdf:about="&pds;PointGeom987882">
+        <rdf:type rdf:resource="&sf;Point"/>
+        <geo:asWKT rdf:datatype="&sf;wktLiteral"> &lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; MULTIPOINT(174.644830566702 -36.8287561666989)  </geo:asWKT>
+    </NamedIndividual>
+    
+
+
+    <!-- http://linz.govt.nz/PropertyDataSchema#PointGeom995789 -->
+
+    <NamedIndividual rdf:about="&pds;PointGeom995789">
+        <rdf:type rdf:resource="&sf;Point"/>
+        <geo:asWKT rdf:datatype="&sf;wktLiteral"> &lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; MULTIPOINT(174.645013116702 -36.8287501999989)  </geo:asWKT>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.ac.govt.nz/parcel#409258 -->
+
+    <NamedIndividual rdf:about="&acp;#409258">
+        <rdf:type rdf:resource="&pds;Parcel"/>
+        <pds:hasExactGeometry rdf:resource="&pds;ExactGeom409258"/>
+        <pds:hasPointGeometry rdf:resource="&pds;PointGeom409258"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.ac.govt.nz/parcel#437866 -->
+
+    <NamedIndividual rdf:about="&acp;#437866">
+        <rdf:type rdf:resource="&pds;Parcel"/>
+        <pds:hasExactGeometry rdf:resource="&pds;ExactGeom437866"/>
+        <pds:hasPointGeometry rdf:resource="&pds;PointGeom437866"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.fire.govt.nz/building#170 -->
+
+    <NamedIndividual rdf:about="http://www.fire.govt.nz/building#170">
+        <rdf:type rdf:resource="&pds;Building"/>
+        <pds:hasExactGeometry rdf:resource="&pds;ExactGeom170"/>
+        <pds:isRelated rdf:resource="&acp;#409258"/>
+        <pds:isRelated rdf:resource="&acp;#437866"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.linz.govt.nz/address#987882 -->
+
+    <NamedIndividual rdf:about="&adr;#987882">
+        <rdf:type rdf:resource="&pds;Address"/>
+        <pds:hasPointGeometry rdf:resource="&pds;PointGeom987882"/>
+        <pds:hasExactGeometry rdf:resource="&pds;PointGeom987882"/>
+        <pds:isRelated rdf:resource="&acp;#409258"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.linz.govt.nz/address#995789 -->
+
+    <NamedIndividual rdf:about="&adr;#995789">
+        <rdf:type rdf:resource="&pds;Address"/>
+        <pds:hasExactGeometry rdf:resource="&pds;PointGeom995789"/>
+        <pds:hasPointGeometry rdf:resource="&pds;PointGeom995789"/>
+        <pds:isRelated rdf:resource="&acp;#437866"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
